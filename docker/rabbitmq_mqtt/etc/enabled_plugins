@@ -1,0 +1,2 @@
+[rabbitmq_management,rabbitmq_prometheus,rabbitmq_auth_backend_http,rabbitmq_mqtt,rabbitmq_auth_backend_cache].
+

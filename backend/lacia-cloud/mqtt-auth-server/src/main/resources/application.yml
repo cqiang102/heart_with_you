@@ -1,0 +1,10 @@
+server:
+  port: 80
+spring:
+  application:
+    name: resources-server
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://192.168.2.5:9200

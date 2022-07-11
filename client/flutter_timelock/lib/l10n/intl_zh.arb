@@ -1,0 +1,17 @@
+{
+  "_locale": "zh",
+  "taskTitle":"心系于你",
+  "titleBarTitle":"心系于你",
+  "clickTop":"你一共点击了这么多次按钮：",
+  "inc":"增加",
+  "pageHomeSamplePlural": "{howMany, plural, one{你有一条消息} other{You have {howMany} messages}}",
+
+  "star":"点赞",
+
+  "now":"现在",
+
+  "future": "未来",
+  "history": "过去"
+
+
+}

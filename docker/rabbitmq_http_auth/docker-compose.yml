@@ -1,0 +1,14 @@
+# rabbitmq http auth
+version: '3.1'
+services:
+  mqtt-autu-server:
+    build: environment
+    restart: always
+    container_name: mqtt-auth-server
+    privileged: true
+    networks:
+      - lacia
+networks:
+  lacia:
+    external: true
+

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.lacia.resources.server.mapper.BindMessageMapper">
+  <resultMap id="BaseResultMap" type="cn.lacia.resources.server.model.BindMessage">
+    <!--@mbg.generated generated on Fri Apr 22 12:34:41 CST 2022.-->
+    <!--@Table lacia_app.bind_message-->
+    <id column="message_id" jdbcType="BIGINT" property="messageId" />
+    <result column="from_id" jdbcType="VARBINARY" property="fromId" />
+    <result column="to_id" jdbcType="BIGINT" property="toId" />
+    <result column="type" jdbcType="INTEGER" property="type" />
+    <result column="body" jdbcType="VARCHAR" property="body" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated generated on Fri Apr 22 12:34:41 CST 2022.-->
+    message_id, from_id, to_id, `type`, body, create_time
+  </sql>
+</mapper>

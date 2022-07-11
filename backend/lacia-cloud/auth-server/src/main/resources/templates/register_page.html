@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>欢迎使用 | 请登录</title>
+    <link rel="stylesheet" href="../static/css/style.css" th:href="@{/css/style.css}">
+    <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.css" th:href="@{/webjars/bootstrap/css/bootstrap.css}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css"
+          integrity="sha512-6c4nX2tn5KbzeBJo9Ywpa0Gkt+mzCzJBrE1RB6fmpcsoN+b/w/euwIMuQKNyUoU/nToKN3a8SgNOtPrbW12fug=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+<div>
+    <div class="container">
+        <div class="screen">
+            <div class="screen__content">
+                <form class="login" style="padding-top: 50px" >
+                    <div class="login__field">
+                        <i class="login__icon fas fa-user"></i>
+                        <input type="text" class="login__input" placeholder="邮箱" name="username" id="username" required>
+                    </div>
+                    <div class="login__field">
+                        <i class="login__icon fas fa-heart"></i>
+                        <input type="text" class="login__input" placeholder="昵称" name="nickname" id="nickname" required>
+                    </div>
+                    <div class="login__field">
+                        <i class="login__icon fas fa-lock"></i>
+                        <input type="password" class="login__input" placeholder="密码" name="password" id="password" required>
+                    </div>
+                    <div class="login__field">
+                        <i class="login__icon fas fa-lock"></i>
+                        <input type="password" class="login__input" placeholder="确认密码"  id="confirm_password" required>
+                    </div>
+                    <p class="button login__submit" onclick="handelSubmit()">
+                        <span class="button__text">注册</span>
+                        <i class="button__icon fas fa-chevron-right"></i>
+                    </p>
+                </form>
+                <div class="social-login" style="height: 60px">
+                    <h4><a href="/loginPage">去登录</a></h4>
+<!--                    <br>-->
+<!--                    <h4>其他登录方式</h4>-->
+<!--                    <div class="social-icons">-->
+<!--                        <a href="#" class="social-login__icon fab fa-github"></a>-->
+<!--                        <a href="#" class="social-login__icon fab fa-instagram"></a>-->
+<!--                        <a href="#" class="social-login__icon fab fa-facebook"></a>-->
+<!--                        <a href="#" class="social-login__icon fab fa-twitter"></a>-->
+<!--                    </div>-->
+                </div>
+            </div>
+            <div class="screen__background">
+                <span class="screen__background__shape screen__background__shape4"></span>
+                <span class="screen__background__shape screen__background__shape3"></span>
+                <span class="screen__background__shape screen__background__shape2"></span>
+                <span class="screen__background__shape screen__background__shape1"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="position-fixed top-0 end-0 p-3" style="z-index: 11">
+    <div id="messageToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <strong class="me-auto">输入错误</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            两次输入的密码不一致
+        </div>
+    </div>
+</div>
+<script src="/webjars/jquery/jquery.min.js" th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script src="/webjars/bootstrap/js/bootstrap.min.js" th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+<script src="../static/js/script.js" th:src="@{/js/script.js}"></script>
+</body>
+
+</html>

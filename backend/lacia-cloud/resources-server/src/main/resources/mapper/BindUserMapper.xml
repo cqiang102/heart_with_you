@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.lacia.resources.server.mapper.BindUserMapper">
+  <resultMap id="BaseResultMap" type="cn.lacia.common.model.BindUser">
+    <!--@mbg.generated generated on Sun Apr 17 14:27:32 CST 2022.-->
+    <!--@Table lacia_app.bind_user-->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="username" jdbcType="BIGINT" property="username" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="nickname" jdbcType="VARCHAR" property="nickname" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="background_url" jdbcType="VARCHAR" property="backgroundUrl" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated generated on Sun Apr 17 14:27:32 CST 2022.-->
+    id, username, `password`, email, nickname,create_time,background_url
+  </sql>
+</mapper>

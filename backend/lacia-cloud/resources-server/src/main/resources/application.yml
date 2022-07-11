@@ -1,0 +1,63 @@
+server:
+  port: 9100
+spring:
+  application:
+    name: resources-server
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+    default-property-inclusion: non_null
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://192.168.2.5:9200
+#        opaquetoken:
+#          introspection-uri: http://localhost:9200
+#          client-id: resources-server-9100
+#          client-secret: 123456
+  datasource:
+    url: jdbc:mysql://192.168.80.153:3306/lacia_app?useUnicode=true&characterEncoding=UTF-8&serverTimeZone=Asia/Shanghai
+    username: root
+    password: 2375622526
+    hikari:
+      connection-test-query: SELECT 1
+      pool-name: lacia_auth_server_cp
+  redis:
+    password: 123456
+    host: 192.168.80.153
+    jedis:
+      pool:
+        enabled: true
+mybatis:
+  type-aliases-package: cn.lacia.resources.server.model,cn.lacia.common.model
+  mapper-locations: classpath:mapper/*.xml
+mqtt:
+  host: tcp://192.168.80.153:1883
+  clientInId: lacia-resources-server
+  clientOutId: lacia-resources-server
+  topic: sys.message
+  qosLevel: 1
+  #MQTT 认证
+  username:  admin
+  password: 123456
+  # 10s
+  timeout: 10000
+  #20s
+  keepalive: 20
+
+minio:
+  endpoint: http://192.168.80.153:9000
+  accessKey: minio
+  secretKey: minio123
+  bucketName: dev
+#logging:
+#  level:
+#    root: INFO
+#    org.springframework.web: INFO
+#    org.springframework.security: INFO
+#    org.springframework.security.oauth2: INFO
+#    org.springframework.boot.autoconfigure: DEBUG
+
+
+

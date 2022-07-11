@@ -1,0 +1,17 @@
+{
+  "_locale": "en",
+  "taskTitle":"heart with you",
+  "titleBarTitle":"Flutter Demo Home Page",
+  "clickTop":"You have pushed the button this many times:",
+  "inc":"Increment",
+  "pageHomeSamplePlural": "{howMany, plural, one{ have 1 message} other{You have {howMany} messages}}",
+
+  "star":"star",
+
+  "now":"Now",
+
+  "future":"Future",
+
+  "history": "History"
+
+}
