@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.lacia.resources.server.mapper.BindNewMapper">
+  <resultMap id="BaseResultMap" type="cn.lacia.resources.server.model.BindNew">
+    <!--@mbg.generated generated on Fri Apr 22 12:34:52 CST 2022.-->
+    <!--@Table lacia_app.bind_new-->
+    <id column="new_id" jdbcType="BIGINT" property="newId" />
+    <result column="body" jdbcType="VARCHAR" property="body" />
+    <result column="images" jdbcType="VARCHAR" property="images" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="star_count" jdbcType="INTEGER" property="starCount" />
+    <result column="up_count" jdbcType="INTEGER" property="upCount" />
+    <result column="comment_count" jdbcType="INTEGER" property="commentCount" />
+    <result column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="tags" jdbcType="VARCHAR" property="tags" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated generated on Fri Apr 22 12:34:52 CST 2022.-->
+    new_id, body, images, create_time, star_count, up_count, comment_count, user_id, 
+    tags
+  </sql>
+</mapper>

@@ -1,0 +1,40 @@
+server:
+  port: 9200
+spring:
+  application:
+    name: auth-server
+  jackson:
+    default-property-inclusion: non_null
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://192.168.2.5:9200
+  datasource:
+    url: jdbc:mysql://192.168.80.153:3306/lacia_app?useUnicode=true&characterEncoding=UTF-8&serverTimeZone=Asia/Shanghai
+    username: root
+    password: 2375622526
+    hikari:
+      connection-test-query: SELECT 1
+      pool-name: lacia_auth_server_cp
+  redis:
+    password: 123456
+    host: 192.168.80.153
+    jedis:
+      pool:
+        enabled: true
+
+auth:
+  provider:
+    issuer: http://192.168.2.5:9200
+mybatis:
+  type-aliases-package: cn.lacia.common.model
+  mapper-locations: classpath:mapper/*.xml
+logging:
+  level:
+    root: INFO
+    org.springframework.web: INFO
+    org.springframework.security: INFO
+    org.springframework.security.oauth2: INFO
+#    org.springframework.boot.autoconfigure: DEBUG
+
